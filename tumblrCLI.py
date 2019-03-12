@@ -1,12 +1,12 @@
 import pytumblr
- 
+import config 
 # Authenticate via API Key
 # Make the request
 #print (client.posts('staff', limit=2, offset=0, filter='html'))
 
 
 def defaultConnect():
-#client = !!!
+        client = pytumblr.TumblrRestClient(config.clientAPIkey['p1'],config.clientAPIkey['p2'],config.clientAPIkey['p3'],config.clientAPIkey['p4'])
 	return client
 
 def listPostsFrom(client, num):
